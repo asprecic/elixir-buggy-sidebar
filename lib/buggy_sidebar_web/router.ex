@@ -18,6 +18,7 @@ defmodule BuggySidebarWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/bug/:value", BugLive, :index
   end
 
   # Other scopes may use custom stacks.
